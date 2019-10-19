@@ -24,7 +24,7 @@ public class BirthdayCandles {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        int[] ar = new int[]{3,2,1,3};
+        int[] ar = {3,2,1,3};
 
         int result = birthdayCakeCandles(ar);
         System.out.println(result);
