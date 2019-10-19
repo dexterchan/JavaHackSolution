@@ -53,7 +53,7 @@ public class Email {
                 "abc@gmail.com, x@gmail.com, hello x, how are you?",
         "x@gmail.com, abc@gmail.com, i am great. how are you?---hello x, how are you?"};
 
-        Stream<String> s=Arrays.stream(emails).sorted((a, b)->a.compareTo(b));
+        Stream<String> s=Arrays.stream(emails).parallel().sorted((a, b)->a.compareTo(b));
 
         List<List<Integer>> ret = getEmailThreads(s.collect(Collectors.toList()));
         System.out.println(ret);
