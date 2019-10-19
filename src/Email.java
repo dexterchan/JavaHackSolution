@@ -1,6 +1,7 @@
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Email {
@@ -54,7 +55,7 @@ public class Email {
 
         Stream<String> s=Arrays.stream(emails).sorted((a, b)->a.compareTo(b));
 
-        List<List<Integer>> ret = getEmailThreads(Arrays.asList(emails));
+        List<List<Integer>> ret = getEmailThreads(s.collect(Collectors.toList()));
         System.out.println(ret);
     }
 }
